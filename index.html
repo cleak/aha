@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ZipZap - AHA!</title>
+
+    <!-- Source code and license on GitHub -->
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="lib/jquery-1.8.2.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="js/Util.js"></script>
+    <script src="js/Parser.js"></script>
+    <script src="js/ObjectManager.js"></script>
+    <script src="js/PassageTokenizer.js"></script>
+    <script src="js/Page.js"></script>
+
+    <!-- content -->
+    <script src="js/Room1.js"></script>
+    <script src="js/TrollRoom.js"></script>
+    <script src="js/DateRoom.js"></script>
+    <script src="js/Rooms.js"></script>
+
+</head>
+<body>
+    <div class="top-bar">
+        <div class="prev-page page-nav"><a href="#">Prev Page</a></div>
+        <div class="input-box"><form id="input-form" target="#"><input type="text" size="24" id="input-box"/></form><br />
+            <ul class="auto-complete">
+                <li></li>
+            </ul>
+        </div>
+        <div class="next-page page-nav"><a href="#">Next Page</a></div>
+    </div>
+    <div class="content">
+        <div id="dialog">
+            <div class="page"></div>
+            <div class="page"></div>
+        </div>
+    </div>
+    <script src="js/Startup.js"></script>
+</body>
+</html>

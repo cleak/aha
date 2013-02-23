@@ -1,0 +1,122 @@
+﻿html, body {
+    background-color: #161617;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    height:100%;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.top-bar {
+    width: 100%;
+    text-align: center;
+    background-color: #161617;
+}
+
+.auto-complete {
+    text-align: left;
+    width: 600px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float:left;
+
+    background-color: #161617;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+
+    display: none;
+    opacity: 0.8;
+}
+
+.auto-complete li {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    color: #F5F5F5;
+}
+
+.selected {
+    background-color: #81818C;
+    /*color: #161617;*/
+}
+
+#input-box {
+    width: 600px;
+    max-width: 130em;
+}
+
+.input-box {
+    display: inline-block;
+    padding-bottom: 6em;
+}
+
+#dialog {
+    height: 100%;
+    max-width: 1024px;
+    vertical-align: top;
+    /*background-color: #494A4D;*/
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 0.25em;
+    padding-bottom: 0.25em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+input[type=text],
+input[type=text]:hover,
+input[type=text]:focus,
+input[type=text]:active
+{
+    border: 0;
+    outline: none;
+    outline-offset: 0;
+    font-size: 24pt;
+    background-color: #68717D;
+    color: #F0F0F5;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#input-form {
+    display: inline-block;
+    text-align:left;
+}
+
+.content {
+    text-align:center;
+    width: 100%;
+}
+
+/** Pages **/
+
+.page {
+    width: 49%;
+    height: 100%;
+    background-color: #494A4D;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0 auto;
+    vertical-align: top;
+    
+    display: inline-block;
+    /*padding-left: 0.25em;
+    padding-bottom: 0.25em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;*/
+}
+
+.page-nav {
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 8em;
+    display: inline-block;
+}
+
+.page-nav a {
+    color: #AAC7FA;
+}
+
