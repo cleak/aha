@@ -18,7 +18,7 @@ zz.TrollRoom = function () {
                     }
 
                     zz.die('oh shit');
-                    return "Great idea!  You charge at the troll with your fists flailing in the air.  After several seconds of attempted bashing, the troll finally feels one of your blows and turns towards you.  With a mighty shove, the trolls pushes you the ground and proceeds to sit on you.  As your ribcage snaps and your lungs collapse, you’re allowed one final moment of reflection to think to yourself “oh shit!”.<br/><br/>Type “oh shit” to continue.";
+                    return "Great idea!  You charge at the troll with your fists flailing in the air.  After several seconds of attempted bashing, the troll finally feels one of your blows and turns towards you.  With a mighty shove, the trolls pushes you to the ground and proceeds to sit on you.  As your ribcage snaps and your lungs collapse, you’re allowed one final moment of reflection to think to yourself “oh shit!”.<br/><br/>Type “oh shit” to continue.";
                 }
         ],
         '<attack>': 'Attack what?',
@@ -110,10 +110,15 @@ zz.TrollRoom = function () {
                 return "You attempt to sharpen the sword in the dirt.  You manage to knick yourself with the pointy end and smear more dirt on the blade.";
             }
 
+
+            if (bladeIsSharp) {
+                return "It's already sharp.  Your terrible coordination can do no better than you have already done.";
+            }
+
             bladeIsSharp = true;
             return "After several minutes of frantic filing, you manage to create a few sharp spots on the blade.";
         },
-        "[eat|swallow] rock": ["OK.<br/><br/>After taking one last glance at your stone, you fling it into your mouth with the palm of your hand and swallow it in a single gulp... and... uh-oh.  They were right.  They were all right.  Your ideas are terrible.  You realize this as you fail to dislodge the last bad idea you will ever have.<br/><br/>Type “I am exceedingly stupid” to continue.",
+        "[eat|swallow] rock": ["OK.<br/><br/>After taking one last glance at your stone, you fling it into your mouth with the palm of your hand and swallow it in a single gulp... and... uh-oh.<br/><br/>They were right.  They were all right.  Your ideas are terrible.  You realize this as you fail to dislodge the last bad idea you will ever have.  Type “I am exceedingly stupid” to continue.",
             function () {
                 zz.die("I am exceedingly stupid");
             }
@@ -126,5 +131,5 @@ zz.TrollRoom = function () {
 };
 
 $(document).ready(function () {
-    zz.page.write("A Horrible Adventure! by Caleb Leak");
+    zz.page.write("A Horrible Adventure!<br/>\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0by Caleb Leak<br/>");
 });

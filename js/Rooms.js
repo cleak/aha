@@ -27,7 +27,7 @@ zz.die = function (deathText) {
 zz.roomIndex = 0;
 
 zz.rooms = [
-//    zz.TrollRoom,
+    zz.TrollRoom,
     zz.DateRoom
 ];
 

@@ -44,6 +44,7 @@
 }
 
 #input-box {
+    margin-top: 0.75em;
     width: 600px;
     max-width: 130em;
 }
@@ -94,7 +95,7 @@ input[type=text]:active
 /** Pages **/
 
 .page {
-    width: 49%;
+    width: 47%;
     height: 100%;
     background-color: #494A4D;
     color: #FFFFFF;
@@ -107,6 +108,10 @@ input[type=text]:active
     padding-bottom: 0.25em;
     padding-top: 0.1em;
     padding-bottom: 0.1em;*/
+    margin-right: 0.35em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    font-size: 13pt;
 }
 
 .page-nav {
