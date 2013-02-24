@@ -125,3 +125,14 @@ input[type=text]:active
     color: #AAC7FA;
 }
 
+#source-code {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0.5em;
+}
+
+#source-code a {
+    color: #CFDDE3;
+    margin: 0.5em;
+}
