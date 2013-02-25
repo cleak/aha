@@ -145,6 +145,9 @@ zz.DateRoom = function () {
                 return enterMessage;
             }
         ],
+        'talk': [
+            "Talk about what?",
+        ]
         'talk [to Alice]? about [[video|computer] games?|computers|science fiction|comic books|pop art|the weather|her day]': [
             "You attempt to start a conversation with Alice.  A frown appears on her face and she rubs her arms for warmth.  “Why are we waiting out here?  I’m cold and you’re a jerk!”.<br/><br/>An unmistakable look of displeasure appears on Alice’s face.",
             function () {

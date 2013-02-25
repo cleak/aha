@@ -116,17 +116,26 @@ zz.ObjectManager = (function () {
         this.objects = [];
     };
 
-    ObjectManager.prototype.run = function (command) {
+    ObjectManager.prototype.run = function (command, dryRun) {
         /// <summary>
         ///   Runs the given command.
         /// </summary>
         /// <param type="String" name="command">
         ///   The string to run.
         /// </param>
+        /// <param type="boolean" name="dryRun" optional="true">
+        ///   Flag indicating if this is a dry run.  If true, don't make
+        ///   any changes, only return if the command was valid.
+        /// </param>
+        /// <returns type="boolean">
+        ///   true if the command was valid, false otherwise.
+        /// </returns>
 
         var matches = [],
             words = this._splitWords(command.replace(/\s*$/, '')),
             result;
+
+        dryRun = dryRun || false;
 
         $(this.objects).each(function (i1, obj) {
             $(obj.productions).each(function (i2, production) {
@@ -138,8 +147,11 @@ zz.ObjectManager = (function () {
 
         if (matches.length === 0) {
             // TODO: Split this off
-            zz.page.write('Huh?<br/>');
-        } else {
+            if (!dryRun) {
+                zz.page.write('Huh?<br/>');
+            }
+            return false;
+        } else if(!dryRun) {
             // 1 or more matches.  Run each.
             $.each(matches, function (i, match) {
                 var result = match();
@@ -148,6 +160,8 @@ zz.ObjectManager = (function () {
                 }
             });
         }
+
+        return true;
     };
 
     ObjectManager.prototype.getPredictions = function (text) {

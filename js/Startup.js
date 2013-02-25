@@ -71,6 +71,17 @@
                 $('.auto-complete').show();
             }
 
+            // Update color based on if it's valid or not
+            var topBar = $('#input-box')
+            topBar.removeClass('valid-input');
+            topBar.removeClass('invalid-input');
+
+            if (objectManager.run(this.value, true)) {
+                topBar.addClass('valid-input');
+            } else if(predictions.length === 0) {
+                topBar.addClass('invalid-input');
+            }
+
             this.oldValue = this.value;
         }
     }

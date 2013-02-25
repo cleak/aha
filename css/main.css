@@ -15,6 +15,14 @@
     background-color: #161617;
 }
 
+.valid-input {
+    background-color: #4C7057 !important;
+}
+
+.invalid-input {
+    background-color: #6B4646 !important;
+}
+
 .auto-complete {
     text-align: left;
     width: 600px;
@@ -36,6 +44,12 @@
     padding-left: 0.1em;
     padding-right: 0.1em;
     color: #F5F5F5;
+}
+
+.auto-complete b {
+    font-weight: 700;
+    color: #FFFFFF;
+    opacity: 0.95;
 }
 
 .selected {
